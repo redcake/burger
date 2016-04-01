@@ -14,7 +14,8 @@ myApp.config(function ($routeProvider) {
         templateUrl: 'partials/survey.html'
     })
     .when('/create',{
-    	templateUrl: 'partials/create.html'
+    	templateUrl: 'partials/create.html',
+        controller: "CreateController"
     })
     .otherwise({
       redirectTo: '/dashboard'

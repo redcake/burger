@@ -10,7 +10,7 @@ var BurgerSchema = new mongoose.Schema({
   toppings: {type: Array},
   bun: {type: String, required: [true, "Select a bun"]},
   patty: {type: String, required: [true, "Select a patty"]},
-  votes: {type: Schema.Types.Mixed, required: true, default: {}}
+  votes: {type: Schema.Types.Mixed, required: true, default: []}
 });
 // use the schema to create the model
 // Note that creating a model CREATES the collection in the database (makes the collection plural)

@@ -1,14 +1,28 @@
 <div id='head'>
+	<script>
+		function sum(votes){
+			var sum = 0;
+			for( var el in obj ) {
+				if( obj.hasOwnProperty( el ) ) {
+					sum += parseFloat( obj[el] );
+    			}
+  			}
+			return sum;
+		}
+	</script>
 	<div>
 		<h3>Welcome, {{userName}}</h3><br>
-		<button ng-click='logout()'>logout</button>
+		<a href="" ng-click='logout()'>logout</a> | <a href="#/create">Create a Master piece</a>
 	</div><br>
 	<div>
 		BURGER OF THE DAY
 	</div>
 </div>
 <div id='side'>
-	TOP BURGERS
+	<h3>other burgers</h3>
+	<ul>
+		<li ng-repeat='burger in burgers track by $index'>{{ burger.name }}<button ng-click='voteUp(burger)'>like</button>  {{ burger.total }}  <button ng-click='voteDown(burger)'>fuck this</button><br>{{ burger._user.name }}</li>
+	</ul>
 </div>
 <div id='main'>
 	ABOUT PAGE

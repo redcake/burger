@@ -1,0 +1,20 @@
+<div>
+	<h1>LETS MAKE A BURGER!!</h1>
+	<a href="" ng-click='logout()'>Logout</a> | <a href="#/main">Home</a>
+	{{ message.message }}
+	<form>
+		<input type='text' placeholder='Burger Name' ng-model='newBurger.name'>
+		Patty:<select  ng-model='newBurger.patty'>
+			<option value='Beef'>Beef</option>
+			<option vaule='Lamb'>Lamb</option>
+		</select>
+		Bun:<select ng-model='newBurger.bun'>
+			<option value='Flour'>Flour</option>
+			<option value='Wheat'>Weat</option>
+		</select>
+		<button ng-click='create(newBurger)'>create</button><br>
+		<label ng-repeat='TopName in toppings'>
+			<input type='checkbox' value='{{fruitName}}' ng-click='toggleSelection(TopName)'>{{TopName}}<br>
+		</label>
+	</form>
+</div>

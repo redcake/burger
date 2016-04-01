@@ -5,13 +5,22 @@ var burgers = require('./../controllers/burgers.js');
 // We will have to require this in the server.js file (and pass it app!)
 module.exports = function(app) {
 // verb: get, plural of target as the URI is the RESTful index method (it returns all users)
-	app.get('/landing', function(req, res) {
+	app.get('/burgers', function(req, res) {
   		burgers.index(req, res);
 	});
-	app.get('/burger/show/:id', function(req, rea) {
+	app.post('/burger/new', function(req, res){
+		console.log(req.body)
+		burgers.create(req, res);
+	})
+	app.get('/burger/show/:id', function(req, res) {
 		burgers.show(req, res);
 	})
-
+	app.patch('/burgers/voteUp', function(req, res) {
+		burgers.voteUp(req, res);
+	})
+	app.patch('/burgers/voteDown', function(req, res) {
+		burgers.voteDown(req, res);
+	})
 
 	//users
 	app.get('/user/login', function(req, res) {
