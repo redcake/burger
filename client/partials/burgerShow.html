@@ -1,0 +1,8 @@
+<div>
+	<h3>{{ burger.name }}</h3>
+	<h5>{{ burger.user }}</h5>
+	<div>
+		<span>{{ burger.patty }}, {{ burger.bun }}</span>
+		<span ng-repeat='topping in toppings'>{{ topping }}</span>
+	</div>
+</div>

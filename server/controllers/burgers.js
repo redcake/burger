@@ -16,14 +16,15 @@ module.exports = (function() {
 			})
 		},
 		create: function(req, res) {
+			console.log(req.body.bun)
 			User.findOne({name: req.body.user}, function(err, data){
 				var burger = new Burgers({name: req.body.name, patty: req.body.patty, bun: req.body.bun, toppings: req.body.toppings, _user: data._id})
 				burger.save(function(err) {
 	      			if(err){
-	        			console.log(err);
+	        			res.json({message: 'YOUR BURGER IS NOT COMPLEATE'})
 	      			} else {
 	      				console.log('create')
-	        			res.json(burger)
+	        			res.json({})
 	      			}
 				})	
 			})

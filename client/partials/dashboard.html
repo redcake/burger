@@ -1,6 +1,53 @@
+<link async href="http://fonts.googleapis.com/css?family=VT323" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    <link async href="http://fonts.googleapis.com/css?family=Bad%20Script" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    <style>
+        .rainbowDataSafe {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            cursor: pointer;
+            border: none;
+            font: normal 70px/1 "VT323", Helvetica, sans-serif;
+            color: rgba(0, 0, 0, 0);
+            text-align: center;
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            text-shadow: 3px 0 0 rgb(217,31,38) , 6px 0 0 rgb(226,91,14) , 9px 0 0 rgb(245,221,8) , 12px 0 0 rgb(5,148,68) , 15px 0 0 rgb(2,135,206) , 18px 0 0 rgb(4,77,145) , 21px 0 0 rgb(42,21,113) ;
+            -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -moz-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -o-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+ 
+ 
+        .DataSafe {
+            text-shadow: -3px 0 0 rgb(217,31,38) , -6px 0 0 rgb(226,91,14) , -9px 0 0 rgb(245,221,8) , -12px 0 0 rgb(5,148,68) , -15px 0 0 rgb(2,135,206) , -18px 0 0 rgb(4,77,145) , -21px 0 0 rgb(42,21,113) ;
+            -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -moz-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -o-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+ 
+        .DataSafeMove {
+             width: 33px;
+             height: 35px;
+             position:fixed;
+             color: rgba(0, 0, 0, 0);
+             background: url('data:image/gif;base64,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') left top no-repeat;
+         }
+ 
+    </style>
+ 
+   
+    <h1 class="rainbowDataSafe" ng-class="{'DataSafe': DataIsSafe}">Happy April Fools Day!</h1>
+   
+ 
+    <div class="DataSafeMove a{{$index}}" ng-repeat="n in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]" ng-init="animationFunction($index)"></div>
 <div>
-	<h3>WELCOME</h3>
-	{{ output.message }}
+	<h3>WELCOME TO BURGER MEISTER</h3>
+	<div class=''>
+		<h5>{{ output.message }}</h5>
+	</div>
 	<form>
 		<input type='text' placeholder='Name..' ng-model='newUser.name'>
 		<input type='password' placeholder='password..' ng-model='newUser.password'>
